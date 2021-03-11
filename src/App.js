@@ -2,12 +2,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
-import Random from './components/jokes/Random'
-import Misc from './components/jokes/Misc'
-import Programing from './components/jokes/Programming'
-import Pun from './components/jokes/Pun'
-import Spooky from './components/jokes/Spooky'
-import Christmas from './components/jokes/Christmas'
+import Jokes from './components/Jokes'
 
 
 // set up routing for the website
@@ -18,26 +13,11 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route exact path="/Home">
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/jokes/Random">
-          <Random />
-        </Route>
-        <Route exact path="/jokes/Misc">
-          <Misc />
-        </Route>
-        <Route path="/jokes/Programming">
-          <Programing />
-        </Route>
-        <Route path="/jokes/Pun">
-          <Pun />
-        </Route>
-        <Route path="/jokes/Spooky">
-          <Spooky />
-        </Route>
-        <Route path="/jokes/Christmas">
-          <Christmas/>
+        <Route exact path="/jokes">
+          <Jokes />
         </Route>
       </Switch>
     </BrowserRouter>
