@@ -5,26 +5,17 @@ const Home = () => {
 
   const [joke, setJoke] = useState([])
 
-  /*
   useEffect(() => {
+    newJoke()
+  },[])
+
+  const newJoke = () => {
     const getData = async() => {
       const response = await axios.get('https://v2.jokeapi.dev/joke/Any')
       setJoke(response.data)
       console.log('response', response)
     }
     getData()
-  },[])
-*/
-  const newJoke = () => {
-    useEffect(() => {
-      const getData = async() => {
-        const response = await axios.get('https://v2.jokeapi.dev/joke/Any')
-        setJoke(response.data)
-        console.log('response', response)
-      }
-      getData()
-    },[])
-    
   }
 
   return (
