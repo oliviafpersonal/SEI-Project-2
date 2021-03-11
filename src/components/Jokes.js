@@ -60,6 +60,15 @@ const Home = () => {
   return (
     <div className="joke-page">
       <div className="container">
+        <div className="categoryDiv">
+          <p className="jokeText">Choose a category:</p>
+          <button className="button is-focused" onClick={() => randomJoke()}>Random Joke</button>
+          <button className="button is-primary is-focused" onClick={() => spookyJoke()}>Spooky Joke</button>
+          <button className="button is-link is-focused" onClick={() => miscJoke()}>Other Joke</button>
+          <button className="button is-info is-focused" onClick={() => programmingJoke()}>Programming Joke</button>
+          <button className="button is-success is-focused " onClick={() => christmasJoke()}>Christmas Joke</button>
+          <button className="button is-warning is-focused " onClick={() => punJoke()}>Pun Joke</button>
+        </div>
         <h1 className="title is-1 has-text-centered">
           {(!joke.joke) ?
             <div className="jokeDiv">
@@ -72,15 +81,6 @@ const Home = () => {
               <p className="jokeText"> {joke.joke} </p>
             </div>
           }
-          <div className="categoryDiv">
-            <p className="jokeText">Choose a category:</p>
-            <button className="button is-focused" onClick={() => randomJoke()}>Random Joke</button>
-            <button className="button is-primary is-focused" onClick={() => spookyJoke()}>Spooky Joke</button>
-            <button className="button is-link is-focused" onClick={() => miscJoke()}>Other Joke</button>
-            <button className="button is-info is-focused" onClick={() => programmingJoke()}>Programming Joke</button>
-            <button className="button is-success is-focused " onClick={() => christmasJoke()}>Christmas Joke</button>
-            <button className="button is-warning is-focused " onClick={() => punJoke()}>Pun Joke</button>
-          </div>
         </h1>
       </div>
     </div>
