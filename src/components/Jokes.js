@@ -6,12 +6,7 @@ const Home = () => {
   const [joke, setJoke] = useState([])
 
   useEffect(() => {
-    randomJoke()
-    spookyJoke()
-    miscJoke()
-    christmasJoke()
-    punJoke()
-  },[])
+  },[[], joke])
 
   const randomJoke = () => {
     const getData = async() => {
