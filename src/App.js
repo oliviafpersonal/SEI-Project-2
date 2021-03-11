@@ -7,6 +7,7 @@ import Misc from './components/jokes/Misc'
 import Programing from './components/jokes/Programming'
 import Pun from './components/jokes/Pun'
 import Spooky from './components/jokes/Spooky'
+import Christmas from './components/jokes/Christmas'
 
 
 // set up routing for the website
@@ -17,7 +18,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/Home">
           <Home />
         </Route>
         <Route exact path="/jokes/Random">
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path="/jokes/Spooky">
           <Spooky />
+        </Route>
+        <Route path="/jokes/Christmas">
+          <Christmas/>
         </Route>
       </Switch>
     </BrowserRouter>
