@@ -17,10 +17,7 @@ const Home = () => {
       setJoke(response.data)
     }
     getData()
-
   }
-
-
 
 
   return (
