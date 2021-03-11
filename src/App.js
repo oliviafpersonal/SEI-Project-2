@@ -1,5 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import Random from './components/jokes/Random'
+import Misc from './components/jokes/Misc'
+import Programing from './components/jokes/Programming'
+import Pun from './components/jokes/Pun'
+import Spooky from './components/jokes/Spooky'
+
 
 // set up routing for the website
 
