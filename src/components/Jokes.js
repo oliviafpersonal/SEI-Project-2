@@ -63,13 +63,20 @@ const Home = () => {
         <div className="container">
           <h1 className="title is-1 has-text-centered">
             {(!joke.joke) ?
+
               <div className="jokeDiv">
                 <p className="jokeText"> Set Up: {joke.setup} </p>
                 <p className="jokeText"> Delivery: {joke.delivery} 🤣 </p>
               </div>
               :
-              <p className="jokeText"> Joke: {joke.joke} </p>
+              <div className="jokeDiv">
+                <p className="jokeText"> Joke: {joke.joke} </p>
+              </div>
+
             }
+
+
+
             <div className="categoryDiv">
               <p className="jokeText">Choose a category:</p>
               <button className="button is-focused" onClick={() => randomJoke()}>Random Joke</button>
@@ -82,7 +89,7 @@ const Home = () => {
           </h1>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
 
