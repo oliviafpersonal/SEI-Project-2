@@ -6,7 +6,8 @@ const Home = () => {
   const [joke, setJoke] = useState([])
 
   useEffect(() => {
-  },[[], joke])
+    randomJoke()
+  },[])
 
   const randomJoke = () => {
     const getData = async() => {
