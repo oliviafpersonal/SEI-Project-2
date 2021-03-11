@@ -6,8 +6,6 @@ const Home = () => {
   const [joke, setJoke] = useState([])
   const [ratingSelected, setRatingSelected] = useState(false)
 
-
-
   useEffect(() => {
     getJoke('any')
     setRatingSelected(false)
@@ -59,11 +57,11 @@ const Home = () => {
         </p>
         {(ratingSelected === false) ?
           <div className='ratingButtons'>
-            <a className='button is-warning is-focused' onClick={() => rateJoke(1)}>1 🌟  </a>
-            <a className='button is-warning is-focused' onClick={() => rateJoke(2)}>2 🌟</a>
-            <a className='button is-warning is-focused' onClick={() => rateJoke(3)}>3 🌟</a>
-            <a className='button is-warning is-focused' onClick={() => rateJoke(4)}>4 🌟</a>
-            <a className='button is-warning is-focused' onClick={() => rateJoke(5)}>5 🌟</a>
+            <p className='button is-warning is-focused' onClick={() => rateJoke(1)}>1 </p>
+            <p className='button is-warning is-focused' onClick={() => rateJoke(2)}>2 </p>
+            <p className='button is-warning is-focused' onClick={() => rateJoke(3)}>3 </p>
+            <p className='button is-warning is-focused' onClick={() => rateJoke(4)}>4 </p>
+            <p className='button is-warning is-focused' onClick={() => rateJoke(5)}>5 </p>
           </div>
           :
           <div className='you-rated-the-joke'>
