@@ -64,10 +64,13 @@ const Home = () => {
           {(!joke.joke) ?
             <div className="jokeDiv">
               <p className="jokeText"> {joke.setup} </p>
+              <br></br>
               <p className="jokeText"> {joke.delivery} 🤣 </p>
             </div>
             :
-            <p className="jokeText"> {joke.joke} </p>
+            <div className="jokeDiv">
+              <p className="jokeText"> {joke.joke} </p>
+            </div>
           }
           <div className="categoryDiv">
             <p className="jokeText">Choose a category:</p>
