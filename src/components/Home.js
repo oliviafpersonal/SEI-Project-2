@@ -12,6 +12,8 @@ const Home = () => {
 
         <Link to="./Jokes" className="accept button is-danger" >I forfeit my rights</Link>
       </div>
+
+      <img src="https://i.pinimg.com/originals/93/cd/da/93cdda3f3ded29563c371d1dcd2c58e1.gif" alt="laughing gif" />
     </>
   )
 }

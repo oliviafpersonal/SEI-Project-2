@@ -5,6 +5,8 @@ const Home = () => {
 
   const [joke, setJoke] = useState([])
 
+
+
   useEffect(() => {
     randomJoke()
   }, [])
@@ -55,13 +57,17 @@ const Home = () => {
       setJoke(response.data)
     }
     getData()
+
   }
+
+
+
 
   return (
     <div className="joke-page">
       <div className="container">
         <div className="categoryDiv">
-          <p className="jokeText">Choose a category:</p>
+          <h3 className="jokeText">Choose a category:</h3>
           <button className="button is-focused" onClick={() => randomJoke()}>Random Joke</button>
           <button className="button is-primary is-focused" onClick={() => spookyJoke()}>Spooky Joke</button>
           <button className="button is-link is-focused" onClick={() => miscJoke()}>Other Joke</button>
@@ -82,6 +88,14 @@ const Home = () => {
             </div>
           }
         </h1>
+        <div className="rating">
+          <p>Rate Me</p>
+          <button>1 🌟 </button>
+          <button>2 🌟 </button>
+          <button>3 🌟 </button>
+          <button>3 🌟 </button>
+          <button>5 🌟 </button>
+        </div>
       </div>
     </div>
   )
