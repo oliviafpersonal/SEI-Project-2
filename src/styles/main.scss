@@ -17,7 +17,14 @@ $font: 'DotGothic16', sans-serif;
   width: 300px;
   align-content: center;
   margin-top: 30px;
+  font-family: $font;
 }
+
+img {
+  text-align: center;
+  align-content: center;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -30,6 +37,10 @@ $font: 'DotGothic16', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.laughing-gif {
+  margin: 20px;
 }
 
 //Jokes
@@ -55,3 +66,8 @@ $font: 'DotGothic16', sans-serif;
   justify-content: center;
   align-items: center;
 }
+
+h3 {
+  font-size: 40px !important;
+}
+

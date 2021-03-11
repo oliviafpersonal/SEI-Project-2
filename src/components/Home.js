@@ -11,6 +11,8 @@ const Home = () => {
         <p className="disclaimer"> Please forfeit your right to place any blame on the creators</p>
 
         <Link to="./Jokes" className="accept button is-danger" >I forfeit my rights</Link>
+
+        <img className='laughing-gif' src="https://i.pinimg.com/originals/93/cd/da/93cdda3f3ded29563c371d1dcd2c58e1.gif" alt="laughing gif" />
       </div>
     </>
   )
