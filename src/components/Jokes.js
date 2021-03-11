@@ -64,6 +64,7 @@ const Home = () => {
           {(!joke.joke) ?
             <div className="jokeDiv">
               <p className="jokeText"> {joke.setup} </p>
+              <br></br>
               <p className="jokeText"> {joke.delivery} 🤣 </p>
             </div>
             :
