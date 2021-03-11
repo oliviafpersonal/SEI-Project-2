@@ -4,11 +4,13 @@ import axios from 'axios'
 const Home = () => {
 
   const [joke, setJoke] = useState([])
+  const [ratingSelected, setRatingSelected] = useState(false)
 
 
 
   useEffect(() => {
     getJoke('any')
+    setRatingSelected(false)
   }, [])
 
   const getJoke = (category) => {
@@ -17,7 +19,21 @@ const Home = () => {
       setJoke(response.data)
     }
     getData()
+    setRatingSelected(false)
+    //console.log(joke)
   }
+
+
+  const rateJoke = (rating) => {
+    console.log(`you rated this joke ${joke.joke} a ${rating}`)
+    setRatingSelected(true)
+    //console.log('rating selcted', ratingSelected)
+    if (ratingSelected === 5) {
+      window.localStorage.setItem('joke', `${joke.joke}`)
+      console.log(localStorage)
+    }
+  }
+
 
 
   return (
@@ -32,7 +48,7 @@ const Home = () => {
           <button className="button is-success is-focused " onClick={() => getJoke('christmas')}>Christmas Joke</button>
           <button className="button is-warning is-focused " onClick={() => getJoke('pun')}>Pun Joke</button>
         </div>
-        <h1 className="title is-1 has-text-centered">
+        <p className="title is-1 has-text-centered">
           {(!joke.joke) ?
             <div className="jokeDiv">
               <p className="jokeText"> {joke.setup} </p>
@@ -44,15 +60,20 @@ const Home = () => {
               <p className="jokeText"> {joke.joke} </p>
             </div>
           }
-        </h1>
-        <div className="rating">
-          <p>Rate Me</p>
-          <button>1 🌟 </button>
-          <button>2 🌟 </button>
-          <button>3 🌟 </button>
-          <button>3 🌟 </button>
-          <button>5 🌟 </button>
-        </div>
+        </p>
+        {(ratingSelected === false) ?
+          <div className='ratingButtons'>
+            <a className='button is-warning is-focused' onClick={() => rateJoke(1)}>1 🌟  </a>
+            <a className='button is-warning is-focused' onClick={() => rateJoke(2)}>2 🌟</a>
+            <a className='button is-warning is-focused' onClick={() => rateJoke(3)}>3 🌟</a>
+            <a className='button is-warning is-focused' onClick={() => rateJoke(4)}>4 🌟</a>
+            <a className='button is-warning is-focused' onClick={() => rateJoke(5)}>5 🌟</a>
+          </div>
+          :
+          <div className='you-rated-the-joke'>
+            <p>Rated!</p>
+          </div>
+        }
       </div>
     </div>
   )
