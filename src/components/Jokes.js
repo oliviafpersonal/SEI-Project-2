@@ -18,18 +18,14 @@ const Home = () => {
     }
     getData()
     setRatingSelected(false)
-    //console.log(joke)
+    console.log(joke)
   }
 
 
   const rateJoke = (rating) => {
     console.log(`you rated this joke ${joke.joke} a ${rating}`)
     setRatingSelected(true)
-    //console.log('rating selcted', ratingSelected)
-    if (ratingSelected === 5) {
-      window.localStorage.setItem('joke', `${joke.joke}`)
-      console.log(localStorage)
-    }
+    console.log('rating selcted', ratingSelected)
   }
 
 
@@ -39,12 +35,12 @@ const Home = () => {
       <div className="container">
         <div className="categoryDiv">
           <p className="jokeText">Choose a category:</p>
-          <button className="button is-rounded is-focused" onClick={() => getJoke('any')}>Random Joke</button>
-          <button className="button is-rounded is-primary is-focused" onClick={() => getJoke('spooky')}>Spooky Joke</button>
-          <button className="button is-rounded is-link is-focused" onClick={() => getJoke('misc')}>Other Joke</button>
-          <button className="button is-rounded is-info is-focused" onClick={() => getJoke('programming')}>Programming Joke</button>
-          <button className="button is-rounded is-success is-focused " onClick={() => getJoke('christmas')}>Christmas Joke</button>
-          <button className="button is-rounded is-warning is-focused " onClick={() => getJoke('pun')}>Pun Joke</button>
+          <button className="button is-rounded is-focused" onClick={() => getJoke('any')}>Random</button>
+          <button className="button is-rounded is-primary is-focused" onClick={() => getJoke('spooky')}>Spooky</button>
+          <button className="button is-rounded is-link is-focused" onClick={() => getJoke('misc')}>Other</button>
+          <button className="button is-rounded is-info is-focused" onClick={() => getJoke('programming')}>Programming</button>
+          <button className="button is-rounded is-success is-focused " onClick={() => getJoke('christmas')}>Christmas</button>
+          <button className="button is-rounded is-warning is-focused " onClick={() => getJoke('pun')}>Pun</button>
         </div>
         <p className="title is-1 has-text-centered">
           {(!joke.joke) ?
@@ -61,6 +57,7 @@ const Home = () => {
         </p>
         {(ratingSelected === false) ?
           <div className='ratingButtons'>
+            <p className='ratingP'>Rate me:</p>
             <p className='button is-rounded is-warning is-focused' onClick={() => rateJoke(1)}>1 </p>
             <p className='button is-rounded is-warning is-focused' onClick={() => rateJoke(2)}>2 </p>
             <p className='button is-rounded is-warning is-focused' onClick={() => rateJoke(3)}>3 </p>

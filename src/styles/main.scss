@@ -64,6 +64,7 @@ img {
   
 }
 
+
 .jokeDiv {
   margin: 30px;
   border: 2px solid black;
@@ -86,4 +87,12 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.ratingP {
+  text-align: center;
+}
+
+.you-rated-the-joke{
+  text-align: center;
 }
