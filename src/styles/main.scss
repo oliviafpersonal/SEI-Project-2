@@ -43,6 +43,20 @@ img {
   margin: 20px;
 }
 
+.footer {
+  font-size: 8px;
+  align-items: baseline;
+  background-color: #FFFFFF;
+}
+
+.footerDiv {
+  bottom:0;
+  width:100%;
+  height:140px;
+  position: fixed;
+  text-align: center;
+}
+
 //Jokes
 .jokeText {
   font-size: 20px;
@@ -67,9 +81,6 @@ img {
   align-items: center;
 }
 
-h3 {
-  font-size: 40px !important;
-}
 
 .ratingButtons{
   display: flex;
