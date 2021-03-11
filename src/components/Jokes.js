@@ -58,35 +58,6 @@ const Home = () => {
   }
 
   return (
-<<<<<<< HEAD
-    <section className="hero is-fullheight-with-navbar ">
-      <div className>
-        <div className="container">
-          <h1 className="title is-1 has-text-centered">
-            {(!joke.joke) ?
-
-              <div className="jokeDiv">
-                <p className="jokeText"> Set Up: {joke.setup} </p>
-                <p className="jokeText"> Delivery: {joke.delivery} 🤣 </p>
-              </div>
-              :
-              <div className="jokeDiv">
-                <p className="jokeText"> Joke: {joke.joke} </p>
-              </div>
-
-            }
-
-
-
-            <div className="categoryDiv">
-              <p className="jokeText">Choose a category:</p>
-              <button className="button is-focused" onClick={() => randomJoke()}>Random Joke</button>
-              <button className="button is-primary is-focused" onClick={() => spookyJoke()}>Spooky Joke</button>
-              <button className="button is-link is-focused" onClick={() => miscJoke()}>Other Joke</button>
-              <button className="button is-info is-focused" onClick={() => programmingJoke()}>Programming Joke</button>
-              <button className="button is-success is-focused " onClick={() => christmasJoke()}>Christmas Joke</button>
-              <button className="button is-warning is-focused " onClick={() => punJoke()}>Pun Joke</button>
-=======
     <div className="joke-page">
       <div className="container">
         <h1 className="title is-1 has-text-centered">
@@ -94,7 +65,6 @@ const Home = () => {
             <div className="jokeDiv">
               <p className="jokeText"> {joke.setup} </p>
               <p className="jokeText"> {joke.delivery} 🤣 </p>
->>>>>>> 61d4ec736b1bf121b0861bc3d1f820ed79038200
             </div>
             :
             <p className="jokeText"> {joke.joke} </p>
@@ -110,11 +80,7 @@ const Home = () => {
           </div>
         </h1>
       </div>
-<<<<<<< HEAD
-    </section >
-=======
     </div>
->>>>>>> 61d4ec736b1bf121b0861bc3d1f820ed79038200
   )
 }
 
