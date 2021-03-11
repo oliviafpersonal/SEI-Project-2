@@ -7,10 +7,10 @@ const Home = () => {
 
   useEffect(() => {
     randomJoke()
-  },[])
+  }, [])
 
   const randomJoke = () => {
-    const getData = async() => {
+    const getData = async () => {
       const response = await axios.get('https://v2.jokeapi.dev/joke/Any?safe-mode')
       setJoke(response.data)
     }
@@ -18,7 +18,7 @@ const Home = () => {
   }
 
   const spookyJoke = () => {
-    const getData = async() => {
+    const getData = async () => {
       const response = await axios.get('https://v2.jokeapi.dev/joke/spooky')
       setJoke(response.data)
     }
@@ -26,15 +26,15 @@ const Home = () => {
   }
 
   const miscJoke = () => {
-    const getData = async() => {
+    const getData = async () => {
       const response = await axios.get('https://v2.jokeapi.dev/joke/misc')
       setJoke(response.data)
     }
     getData()
   }
-  
+
   const programmingJoke = () => {
-    const getData = async() => {
+    const getData = async () => {
       const response = await axios.get('https://v2.jokeapi.dev/joke/programming')
       setJoke(response.data)
     }
@@ -42,7 +42,7 @@ const Home = () => {
   }
 
   const christmasJoke = () => {
-    const getData = async() => {
+    const getData = async () => {
       const response = await axios.get('https://v2.jokeapi.dev/joke/christmas')
       setJoke(response.data)
     }
@@ -50,7 +50,7 @@ const Home = () => {
   }
 
   const punJoke = () => {
-    const getData = async() => {
+    const getData = async () => {
       const response = await axios.get('https://v2.jokeapi.dev/joke/pun')
       setJoke(response.data)
     }
@@ -58,24 +58,27 @@ const Home = () => {
   }
 
   return (
-    <section className="hero is-fullheight-with-navbar is-warning">
-      <div className="hero-body">
+    <section className="hero is-fullheight-with-navbar ">
+      <div className>
         <div className="container">
           <h1 className="title is-1 has-text-centered">
             {(!joke.joke) ?
-              <p>
-                <p> Set Up: {joke.setup} </p>
-                <p> Delivery: {joke.delivery} </p>
-              </p>
+              <div className="jokeDiv">
+                <p className="jokeText"> Set Up: {joke.setup} </p>
+                <p className="jokeText"> Delivery: {joke.delivery} 🤣 </p>
+              </div>
               :
-              <p> joke: {joke.joke} </p>
+              <p className="jokeText"> Joke: {joke.joke} </p>
             }
-            <button onClick={() => randomJoke()}>New Joke</button>
-            <button onClick={() => spookyJoke()}>Spooky Joke</button>
-            <button onClick={() => miscJoke()}>Other Joke</button>
-            <button onClick={() => programmingJoke()}>Programming Joke</button>
-            <button onClick={() => christmasJoke()}>Christmas Joke</button>
-            <button onClick={() => punJoke()}>Pun Joke</button>
+            <div className="categoryDiv">
+              <p className="jokeText">Choose a category:</p>
+              <button className="button is-focused" onClick={() => randomJoke()}>Random Joke</button>
+              <button className="button is-primary is-focused" onClick={() => spookyJoke()}>Spooky Joke</button>
+              <button className="button is-link is-focused" onClick={() => miscJoke()}>Other Joke</button>
+              <button className="button is-info is-focused" onClick={() => programmingJoke()}>Programming Joke</button>
+              <button className="button is-success is-focused " onClick={() => christmasJoke()}>Christmas Joke</button>
+              <button className="button is-warning is-focused " onClick={() => punJoke()}>Pun Joke</button>
+            </div>
           </h1>
         </div>
       </div>

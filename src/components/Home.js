@@ -5,10 +5,13 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <>
-      <p> A Oliva Flynn and Michael Henderson Website </p>
-      <p> While we have put on a safe mode, we cannot gaurentee that all jokes are safe </p>
-      
-      <Link to="./Jokes" className="accept">accept</Link>
+      <div className="wrapper">
+        <p className="disclaimer"> An Olivia Flynn and Michael Henderson Website </p>
+        <p className="disclaimer"> While we have put on a safe mode, we cannot gaurentee that all jokes are safe </p>
+        <p className="disclaimer"> Please forfeit your right to place any blame on the creators</p>
+
+        <Link to="./Jokes" className="accept button is-danger" >I forfeit my rights</Link>
+      </div>
     </>
   )
 }
