@@ -17,11 +17,11 @@ const RatedJokes = () => {
         <br></br>
         <p>
           {ratedJokes.map(joke =>
-            <div className="box" key={joke}>
-              <div className="animation">
-                <p key={joke} >{joke}</p>
-              </div>
+            <div className="box hover" key={joke}>
+
+              <p key={joke} >{joke}</p>
             </div>
+
           )}
         </p>
       </div>
