@@ -95,23 +95,154 @@ img {
   text-align: center;
 }
 
+$font: 'DotGothic16', sans-serif;
+@import '~bulma/bulma.sass';
+
+* {
+  font-family: $font;
+}
+
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.disclaimer {
+  text-align: center;
+  font-family: $font;
 
-.ratingButtons{
+}
+
+.flex-box-all {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-.ratingP {
-  text-align: center;
+.jokeText {
+  font-size: 20px;
+  margin: 10px; 
 }
 
-.you-rated-the-joke{
-  text-align: center;
+
+.category-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.category-buttons .button {
+  margin: 5px 10px;
+  width: 300px;
+}
+
+.joke-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  height: 200px;
+  width: 800px;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.flex-box-rating-whole {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-box-inner-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.rating-buttons {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.rating-buttons p {
+  background-color: black;
+  color: white;
+  width: 150px;
+}
+
+.flex-box-rated-whole {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.flex-box-rated {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.button-rating-div p {
+  background-color: black;
+  color: white;
+  width: 350px;
+}
+
+.reated {
+  width: 300px
+}
+
+.flex-box-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  flex-direction: column;
+}
+
+.flex-box-home p {
+  margin: 30px;
+}
+
+.flex-box-home a {
+  margin-top: 30px;
+}
+
+
+@media screen and (max-width: 850px) {
+
+  .flex-box-all {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rating-buttons {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .joke-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    height: 200px;
+    width: 80%;
+    margin: 20px;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+
 }

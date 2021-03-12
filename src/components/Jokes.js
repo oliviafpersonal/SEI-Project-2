@@ -37,57 +37,56 @@ const Home = () => {
     setRatingSelected(true)
   }
 
-
+  // CAN BE USED FOR TIMEOUT FOR ONCE JOKE IS RATED
+  // console.log('current catagory is', currentCategory)
+  // setTimeout(() => getJoke(currentCategory), 1000);
 
   return (
-    <div className="joke-page">
-      <div className="container">
-        <div className="categoryDiv">
-          <p className="jokeText">Choose a category:</p>
+    <div className="container flex-box-all">
+      <p className="jokeText">Choose a category:</p>
 
-          <div className='category-buttons'>
-            <button className="button is-focused" onClick={() => getJoke('any')}>Random Joke</button>
-            <button className="button is-primary is-focused" onClick={() => getJoke('spooky')}>Spooky Joke</button>
-            <button className="button is-link is-focused" onClick={() => getJoke('misc')}>Other Joke</button>
-          </div>
-          <div className='category-buttons'>
-            <button className="button is-info is-focused" onClick={() => getJoke('programming')}>Programming Joke</button>
-            <button className="button is-success is-focused " onClick={() => getJoke('christmas')}>Christmas Joke</button>
-            <button className="button is-warning is-focused " onClick={() => getJoke('pun')}>Pun Joke</button>
-          </div>
+      <div className='category-buttons'>
+        <button className="button is-focused" onClick={() => getJoke('any')}>Random Joke</button>
+        <button className="button is-primary is-focused" onClick={() => getJoke('spooky')}>Spooky Joke</button>
+        <button className="button is-link is-focused" onClick={() => getJoke('misc')}>Other Joke</button>
+      </div>
+      <div className='category-buttons'>
+        <button className="button is-info is-focused" onClick={() => getJoke('programming')}>Programming Joke</button>
+        <button className="button is-success is-focused " onClick={() => getJoke('christmas')}>Christmas Joke</button>
+        <button className="button is-warning is-focused " onClick={() => getJoke('pun')}>Pun Joke</button>
+      </div>
 
-          <p className='joke-container'>
-            {(!joke.joke) ?
-              <div>
-                <p> {joke.setup} </p>
-                <p> {joke.delivery} 🤣 </p>
-              </div>
-              :
-              <p> {joke.joke} </p>
-            }
-          </p>
-          <div className='flex-box-rating-whole'>
-            {(ratingSelected === false) ?
-              <div className='flex-box-inner-rating'>
-                <p>Rate this joke out of 5 ?</p>
-                <div className='rating-buttons'>
-                  <p className='button rating' onClick={() => rateJoke(1)}>1</p>
-                  <p className='button rating' onClick={() => rateJoke(2)}>2</p>
-                  <p className='button rating' onClick={() => rateJoke(3)}>3</p>
-                  <p className='button rating' onClick={() => rateJoke(4)}>4</p>
-                  <p className='button rating' onClick={() => rateJoke(5)}>5</p>
-                </div>
-              </div>
-              :
-              <div className='flex-box-inner-rating'>
-                <p>Rated!</p>
-                <div className='rating-buttons'>
-                  <p className='rated button' onClick={() => getJoke(currentCategory)}>Next Joke</p>
-                </div>
-              </div>
-            }
+      <p className='joke-container'>
+        {(!joke.joke) ?
+          <div>
+            <p> {joke.setup} </p>
+            <p> {joke.delivery} 🤣 </p>
           </div>
-        </div>
+          :
+          <p> {joke.joke} </p>
+        }
+      </p>
+
+      <div className='flex-box-rating-whole'>
+        {(ratingSelected === false) ?
+          <div className='flex-box-inner-rating'>
+            <p>Rate this joke out of 5 ?</p>
+            <div className='rating-buttons'>
+              <p className='button rating' onClick={() => rateJoke(1)}>1</p>
+              <p className='button rating' onClick={() => rateJoke(2)}>2</p>
+              <p className='button rating' onClick={() => rateJoke(3)}>3</p>
+              <p className='button rating' onClick={() => rateJoke(4)}>4</p>
+              <p className='button rating' onClick={() => rateJoke(5)}>5</p>
+            </div>
+          </div>
+          :
+          <div className='flex-box-inner-rating'>
+            <p>Rated!</p>
+            <div className='rating-buttons'>
+              <p className='rated button' onClick={() => getJoke(currentCategory)}>Next Joke</p>
+            </div>
+          </div>
+        }
       </div>
     </div>
   )
