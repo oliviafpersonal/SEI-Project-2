@@ -193,20 +193,19 @@ img {
   }
 }
 
-.container-about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.person {
+.person-outer {
   padding: 50px 50px 25px 50px;
+  display: flex;
+  justify-content: space-evenly;
   h1 {
     font-weight: bolder;
     font-size: 20px;
   }
 }
 
+.spotify-section {
+  display: flex;
+}
 
 @media screen and (max-width: 850px) {
 
