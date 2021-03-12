@@ -115,3 +115,29 @@ img {
 .you-rated-the-joke{
   text-align: center;
 }
+
+
+  .is-warning{
+    font-size: 25px;
+    width: 200px;
+    text-align: center;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .is-warning:after {
+    content: "";
+    background: #dfae46;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+
+  
+
