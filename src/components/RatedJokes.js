@@ -12,8 +12,8 @@ const RatedJokes = () => {
 
   return (
     <>
-      <div className="container">
-        <p>Here are the latest jokes you have rated</p>
+      <div className="container-rated-jokes">
+        <h1>Here are the latest jokes you have rated</h1>
         <br></br>
         <p>
           {ratedJokes.map( joke =>

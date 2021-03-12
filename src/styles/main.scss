@@ -12,18 +12,10 @@ $font: 'DotGothic16', sans-serif;
   align-items: center;
 }
 
-//Home
 .disclaimer {
   text-align: center;
   font-family: $font;
 
-}
-.button {
-  text-align: center;
-  width: 300px;
-  align-content: center;
-  margin-top: 30px;
-  font-family: $font;
 }
 
 .accept {
@@ -53,7 +45,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .joke-page {
@@ -177,10 +169,19 @@ img {
   margin: 30px;
 }
 
-.flex-box-home a {
-  margin-top: 30px;
-}
+.container-rated-jokes {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
+    h1 {
+      font-size: 25px;
+      font-weight: bold;
+
+  }
+}
 
 @media screen and (max-width: 850px) {
 
