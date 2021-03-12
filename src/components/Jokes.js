@@ -16,6 +16,7 @@ const Home = () => {
   }, [])
 
   const getJoke = (category) => {
+    setJoke([])
     const getData = async () => {
       const response = await axios.get(`https://v2.jokeapi.dev/joke/${category}?safe-mode`)
       setJoke(response.data)
@@ -57,13 +58,16 @@ const Home = () => {
       </div>
 
       <p className='joke-container'>
-        {(!joke.joke) ?
-          <div>
-            <p> {joke.setup} </p>
-            <p> {joke.delivery} 🤣 </p>
-          </div>
+        {(joke.length !== 0) ?
+          (!joke.joke) ?
+            <div>
+              <p> {joke.setup} </p>
+              <p> {joke.delivery} 🤣 </p>
+            </div>
+            :
+            <p> {joke.joke} </p>
           :
-          <p> {joke.joke} </p>
+          <p>Loading...</p>
         }
       </p>
 

@@ -16,7 +16,7 @@ const Home = () => {
           </div>
           <div className='info-section'>
             <p>Software Engineer from London.</p>
-            <p>Likes: Aperol Spritzs in beer gardens, travelling and detailed spotify playlist names.</p>
+            <p>Likes: Aperol Spritzs in beer gardens, travelling <br/>and detailed spotify playlist names.</p>
             <p>Fun Fact: Has been to 24 countries.</p>
             <p><a href='https://www.linkedin.com/in/olivia-flynn-061518150/' target="blank">LinkedIn</a> | <a href='https://github.com/oliviafpersonal' target='blank'>GitHub</a></p>
           </div>
@@ -36,7 +36,7 @@ const Home = () => {
           </div>
           <div className='info-section'>
             <p>Software Engineer from London.</p>
-            <p>Likes: Prosecco, Kate Bush, Sun Ra, and long walks in forests.</p>
+            <p>Likes: Prosecco, Kate Bush, Mango Chutney, and the BioShock game series.</p>
             <p>Fun Fact: Color blind but can solve a Rubiks Cube.</p>
             <p><a href='https://www.linkedin.com/in/mhenderson24/' target="blank">LinkedIn</a> | <a href='https://github.com/Awyssa' target='blank'>GitHub</a></p>
           </div>
