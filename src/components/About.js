@@ -8,7 +8,9 @@ const Home = () => {
       <div className='person-outer'>
         <div className='person-inner'>
           <h1> Olivia Flynn</h1>
-          <img src="https://media-exp1.licdn.com/dms/image/C4D03AQF6x3r13kR2Rg/profile-displayphoto-shrink_200_200/0/1615162371959?e=1620864000&v=beta&t=R1LTPi3GqqCzFrhhZx4TOWdWjPjyJuQcjU4wCGzmkFU" alt="olivia-img" />
+          <div className="photo-container">
+            <span className="btn"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQF6x3r13kR2Rg/profile-displayphoto-shrink_200_200/0/1615162371959?e=1620864000&v=beta&t=R1LTPi3GqqCzFrhhZx4TOWdWjPjyJuQcjU4wCGzmkFU" alt="olivia-img" /></span>
+          </div>
           <div className='about-info'>
           </div>
           <div className='info-section'>
@@ -25,7 +27,9 @@ const Home = () => {
       <div className='person-outer'>
         <div className='person-inner'>
           <h1> Michael Henderson</h1>
-          <img src="https://media-exp1.licdn.com/dms/image/C4D03AQGMEdWdBetqYg/profile-displayphoto-shrink_200_200/0/1613654052738?e=1620864000&v=beta&t=A1slZ-XvNW9tTMhe7cZOtMf2j-Iti8hPeLm0rupa2l0" alt="michael-img" />
+          <div className="photo-container">
+            <span className="btn"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQGMEdWdBetqYg/profile-displayphoto-shrink_200_200/0/1613654052738?e=1620864000&v=beta&t=A1slZ-XvNW9tTMhe7cZOtMf2j-Iti8hPeLm0rupa2l0" alt="michael-img" /></span>
+          </div>
           <div className='about-info'>
           </div>
           <div className='info-section'>
