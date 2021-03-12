@@ -5,10 +5,12 @@ const Home = () => {
 
   const [joke, setJoke] = useState([])
   const [ratingSelected, setRatingSelected] = useState(false)
+  const [jokeIndex, setJokeIndex] = useState(0)
+  const [currentCategory, setCurrentCategory] = useState(null)
 
   useEffect(() => {
-    getJoke('any')
     setRatingSelected(false)
+    getJoke('any')
   }, [])
 
   const getJoke = (category) => {
@@ -18,14 +20,21 @@ const Home = () => {
     }
     getData()
     setRatingSelected(false)
-    console.log(joke)
+    console.log('getjoke catagory is', category)
+    setCurrentCategory(category)
   }
 
 
   const rateJoke = (rating) => {
-    console.log(`you rated this joke ${joke.joke} a ${rating}`)
+    if (!joke.joke) {
+      localStorage.setItem(`joke${jokeIndex}`, `Rating: ${rating} - ${joke.setup} ${joke.delivery}`)
+      setJokeIndex(jokeIndex + 1)
+    } else {
+      localStorage.setItem(`joke${jokeIndex}`, `Rating: ${rating} - ${joke.joke}`)
+      setJokeIndex(jokeIndex + 1)
+      console.log(jokeIndex)
+    }
     setRatingSelected(true)
-    console.log('rating selcted', ratingSelected)
   }
 
 
@@ -35,42 +44,50 @@ const Home = () => {
       <div className="container">
         <div className="categoryDiv">
           <p className="jokeText">Choose a category:</p>
-          <button className="button is-rounded is-focused" onClick={() => getJoke('any')}>Random</button>
-          <button className="button is-rounded is-primary is-focused" onClick={() => getJoke('spooky')}>Spooky</button>
-          <button className="button is-rounded is-link is-focused" onClick={() => getJoke('misc')}>Other</button>
-          <button className="button is-rounded is-info is-focused" onClick={() => getJoke('programming')}>Programming</button>
-          <button className="button is-rounded is-success is-focused " onClick={() => getJoke('christmas')}>Christmas</button>
-          <button className="button is-rounded is-info is-focused " onClick={() => getJoke('pun')}>Pun</button>
+
+          <div className='category-buttons'>
+            <button className="button is-focused" onClick={() => getJoke('any')}>Random Joke</button>
+            <button className="button is-primary is-focused" onClick={() => getJoke('spooky')}>Spooky Joke</button>
+            <button className="button is-link is-focused" onClick={() => getJoke('misc')}>Other Joke</button>
+          </div>
+          <div className='category-buttons'>
+            <button className="button is-info is-focused" onClick={() => getJoke('programming')}>Programming Joke</button>
+            <button className="button is-success is-focused " onClick={() => getJoke('christmas')}>Christmas Joke</button>
+            <button className="button is-warning is-focused " onClick={() => getJoke('pun')}>Pun Joke</button>
+          </div>
+
+          <p className='joke-container'>
+            {(!joke.joke) ?
+              <div>
+                <p> {joke.setup} </p>
+                <p> {joke.delivery} 🤣 </p>
+              </div>
+              :
+              <p> {joke.joke} </p>
+            }
+          </p>
+          <div className='flex-box-rating-whole'>
+            {(ratingSelected === false) ?
+              <div className='flex-box-inner-rating'>
+                <p>Rate this joke out of 5 ?</p>
+                <div className='rating-buttons'>
+                  <p className='button rating' onClick={() => rateJoke(1)}>1</p>
+                  <p className='button rating' onClick={() => rateJoke(2)}>2</p>
+                  <p className='button rating' onClick={() => rateJoke(3)}>3</p>
+                  <p className='button rating' onClick={() => rateJoke(4)}>4</p>
+                  <p className='button rating' onClick={() => rateJoke(5)}>5</p>
+                </div>
+              </div>
+              :
+              <div className='flex-box-inner-rating'>
+                <p>Rated!</p>
+                <div className='rating-buttons'>
+                  <p className='rated button' onClick={() => getJoke(currentCategory)}>Next Joke</p>
+                </div>
+              </div>
+            }
+          </div>
         </div>
-        <p className="title is-1 has-text-centered">
-          {(!joke.joke) ?
-            <div className="jokeDiv">
-              <p className="jokeText"> {joke.setup} </p>
-              <br></br>
-              <p className="jokeText"> {joke.delivery} 🤣 </p>
-            </div>
-            :
-            <div className="jokeDiv">
-              <p className="jokeText"> {joke.joke} </p>
-            </div>
-          }
-        </p>
-
-        {(ratingSelected === false) ?
-          <div className='ratingButtons'>
-            <p className='ratingP'>Rate me:</p>
-            <p className='button is-rounded is-warning is-focused' onClick={() => rateJoke(1)}>🌟  </p>
-            <p className='button is-rounded is-warning is-focused' onClick={() => rateJoke(2)}>🌟🌟 </p>
-            <p className='button is-rounded is-warning is-focused' onClick={() => rateJoke(3)}>🌟🌟🌟 </p>
-            <p className='button is-rounded is-warning is-focused' onClick={() => rateJoke(4)}>🌟🌟🌟🌟 </p>
-            <p className='button is-rounded is-warning is-focused' onClick={() => rateJoke(5)}>🌟🌟🌟🌟🌟 </p>
-          </div>
-          :
-          <div className='you-rated-the-joke'>
-            <p>Rated!</p>
-          </div>
-        }
-
       </div>
     </div>
   )

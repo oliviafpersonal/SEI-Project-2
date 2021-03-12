@@ -3,9 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Jokes from './components/Jokes'
-
-
-// set up routing for the website
+import RatedJokes from './components/RatedJokes'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -18,6 +17,12 @@ function App() {
         </Route>
         <Route exact path="/jokes">
           <Jokes />
+        </Route>
+        <Route exact path="/RatedJokes">
+          <RatedJokes />
+        </Route>
+        <Route exact path="/Footer">
+          <Footer />
         </Route>
       </Switch>
     </BrowserRouter>
