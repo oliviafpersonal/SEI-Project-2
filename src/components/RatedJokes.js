@@ -16,8 +16,10 @@ const RatedJokes = () => {
         <h1>Here are the latest jokes you have rated</h1>
         <br></br>
         <p>
-          {ratedJokes.map( joke =>
-            <p key={joke} >{joke}</p>
+          {ratedJokes.map(joke =>
+            <div className="box" key={joke}>
+              <p key={joke} >{joke}</p>
+            </div>
           )}
         </p>
       </div>
