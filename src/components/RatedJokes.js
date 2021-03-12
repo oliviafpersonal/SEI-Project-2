@@ -18,7 +18,9 @@ const RatedJokes = () => {
         <p>
           {ratedJokes.map(joke =>
             <div className="box" key={joke}>
-              <p key={joke} >{joke}</p>
+              <div className="animation">
+                <p key={joke} >{joke}</p>
+              </div>
             </div>
           )}
         </p>

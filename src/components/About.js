@@ -13,8 +13,8 @@ const Home = () => {
           </div>
           <div className='info-section'>
             <p>Software Engineer from London.</p>
-            <p>Likes: Prosecco, Kate Bush, Adventure Time, and long walks in forests.</p>
-            <p>Fun Fact: Color blind but can solve a Rubiks Cube.</p>
+            <p>Likes: Aperol Spritzs in beer gardens, travelling and  .</p>
+            <p>Fun Fact: Has been to 24 countries.</p>
             <p><a href='https://www.linkedin.com/in/olivia-flynn-061518150/' target="blank">LinkedIn</a> | <a href='https://github.com/oliviafpersonal' target='blank'>GitHub</a></p>
           </div>
         </div>
