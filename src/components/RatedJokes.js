@@ -22,8 +22,8 @@ const RatedJokes = () => {
     <>
       <div className="container-rated-jokes">
         <h1>Here are the latest jokes you have rated</h1>
-        <div className='button clearJokes'>
-          <button onClick={() => clearJoke()}>Clear Jokes</button>
+        <div>
+          <button className="is-focused" onClick={() => clearJoke()}>Clear Jokes</button>
         </div>
         <br></br>
         <p>
