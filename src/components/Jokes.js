@@ -58,11 +58,11 @@ const Home = () => {
         {(ratingSelected === false) ?
           <div className='ratingButtons'>
             <p className='ratingP'>Rate me:</p>
-            <p className='button is-rounded is-warning is-focused' onClick={() => rateJoke(1)}>1 </p>
-            <p className='button is-rounded is-warning is-focused' onClick={() => rateJoke(2)}>2 </p>
-            <p className='button is-rounded is-warning is-focused' onClick={() => rateJoke(3)}>3 </p>
-            <p className='button is-rounded is-warning is-focused' onClick={() => rateJoke(4)}>4 </p>
-            <p className='button is-rounded is-warning is-focused' onClick={() => rateJoke(5)}>5 </p>
+            <p className='button is-rounded is-warning is-light' onClick={() => rateJoke(1)}>🌟  </p>
+            <p className='button is-rounded is-warning is-light' onClick={() => rateJoke(2)}>🌟🌟 </p>
+            <p className='button is-rounded is-warning is-light' onClick={() => rateJoke(3)}>🌟🌟🌟 </p>
+            <p className='button is-rounded is-warning is-light' onClick={() => rateJoke(4)}>🌟🌟🌟🌟 </p>
+            <p className='button is-rounded is-warning is-light' onClick={() => rateJoke(5)}>🌟🌟🌟🌟🌟 </p>
           </div>
           :
           <div className='you-rated-the-joke'>

@@ -20,6 +20,25 @@ $font: 'DotGothic16', sans-serif;
   font-family: $font;
 }
 
+.accept {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.accept:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
 img {
   text-align: center;
   align-content: center;
