@@ -58,7 +58,6 @@ const Home = () => {
       </div>
 
       <p className='joke-container'>
-        {console.log('joke', joke)}
         {(joke.length !== 0) ?
           (!joke.joke) ?
             <div>
