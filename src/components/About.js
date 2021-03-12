@@ -22,7 +22,7 @@ const Home = () => {
           </div>
         </div>
         <div className='spotify-section'>
-          <iframe width="450" height="300" src="https://youtu.be/0HbagZwKBro" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          <iframe width="450" height="300" src="https://www.youtube.com/embed/0HbagZwKBro" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
         </div>
       </div>
       <div className='person-outer'>
@@ -50,3 +50,4 @@ const Home = () => {
 }
 
 export default Home
+
