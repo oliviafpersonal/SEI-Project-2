@@ -5,8 +5,10 @@ const Home = () => {
 
   const [joke, setJoke] = useState([])
   const [ratingSelected, setRatingSelected] = useState(false)
-  const [jokeIndex, setJokeIndex] = useState(0)
+  const [jokeIndex, setJokeIndex] = useState(localStorage.length)
   const [currentCategory, setCurrentCategory] = useState(null)
+
+  console.log('current storage', localStorage.length)
 
   useEffect(() => {
     setRatingSelected(false)
@@ -20,7 +22,6 @@ const Home = () => {
     }
     getData()
     setRatingSelected(false)
-    console.log('getjoke catagory is', category)
     setCurrentCategory(category)
   }
 
@@ -32,7 +33,6 @@ const Home = () => {
     } else {
       localStorage.setItem(`joke${jokeIndex}`, `Rating: ${rating} - ${joke.joke}`)
       setJokeIndex(jokeIndex + 1)
-      console.log(jokeIndex)
     }
     setRatingSelected(true)
   }
