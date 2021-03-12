@@ -46,14 +46,14 @@ const Home = () => {
       <p className="jokeText">Choose a category:</p>
 
       <div className='category-buttons'>
-        <button className="button is-focused" onClick={() => getJoke('any')}>Random Joke</button>
-        <button className="button is-primary is-focused" onClick={() => getJoke('spooky')}>Spooky Joke</button>
-        <button className="button is-link is-focused" onClick={() => getJoke('misc')}>Other Joke</button>
+        <button className="button is-link is-focused" onClick={() => getJoke('any')}><span>Random Joke</span></button>
+        <button className="button is-primary is-focused" onClick={() => getJoke('spooky')}><span>Spooky Joke</span></button>
+        <button className="button is-focused" onClick={() => getJoke('misc')}><span>Other Joke</span></button>
       </div>
       <div className='category-buttons'>
-        <button className="button is-info is-focused" onClick={() => getJoke('programming')}>Programming Joke</button>
-        <button className="button is-success is-focused " onClick={() => getJoke('christmas')}>Christmas Joke</button>
-        <button className="button is-warning is-focused " onClick={() => getJoke('pun')}>Pun Joke</button>
+        <button className="button is-info is-focused" onClick={() => getJoke('programming')}><span>Programming Joke</span></button>
+        <button className="button is-success is-focused " onClick={() => getJoke('christmas')}><span>Christmas Joke</span></button>
+        <button className="button is-warning is-focused " onClick={() => getJoke('pun')}><span>Pun Joke</span></button>
       </div>
 
       <p className='joke-container'>
@@ -72,18 +72,18 @@ const Home = () => {
           <div className='flex-box-inner-rating'>
             <p>Rate this joke out of 5 ?</p>
             <div className='rating-buttons'>
-              <p className='button rating' onClick={() => rateJoke(1)}>1</p>
-              <p className='button rating' onClick={() => rateJoke(2)}>2</p>
-              <p className='button rating' onClick={() => rateJoke(3)}>3</p>
-              <p className='button rating' onClick={() => rateJoke(4)}>4</p>
-              <p className='button rating' onClick={() => rateJoke(5)}>5</p>
+              <p className='button rating glow-button' onClick={() => rateJoke(1)}>🌟 </p>
+              <p className='button rating glow-button' onClick={() => rateJoke(2)}>🌟 🌟 </p>
+              <p className='button rating glow-button' onClick={() => rateJoke(3)}>🌟 🌟 🌟 </p>
+              <p className='button rating glow-button' onClick={() => rateJoke(4)}>🌟 🌟 🌟 🌟 </p>
+              <p className='button rating glow-button' onClick={() => rateJoke(5)}>🌟 🌟 🌟 🌟 🌟 </p>
             </div>
           </div>
           :
           <div className='flex-box-inner-rating'>
             <p>Rated!</p>
             <div className='rating-buttons'>
-              <p className='rated button' onClick={() => getJoke(currentCategory)}>Next Joke</p>
+              <p className='rated-button' onClick={() => getJoke(currentCategory)}>Next Joke</p>
             </div>
           </div>
         }
