@@ -1,11 +1,14 @@
 import React from 'react'
 
 const RatedJokes = () => {
+
   const ratedJokes = []
   const show10RatedJokes = () => {
     for (let i = 0; i < 20; i++) {
       const joke = localStorage.getItem(`joke${i}`)
-      ratedJokes.push(joke)
+      if (joke !== null) {
+        ratedJokes.push(joke)
+      }
     }
   }
   show10RatedJokes()
