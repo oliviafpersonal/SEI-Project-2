@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Jokes from './components/Jokes'
 import RatedJokes from './components/RatedJokes'
-import Footer from './components/Footer'
+import About from './components/About'
 
 function App() {
 
@@ -21,8 +21,8 @@ function App() {
         <Route exact path="/RatedJokes">
           <RatedJokes />
         </Route>
-        <Route exact path="/Footer">
-          <Footer />
+        <Route exact path="/About">
+          <About />
         </Route>
       </Switch>
     </BrowserRouter>

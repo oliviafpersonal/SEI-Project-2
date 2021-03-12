@@ -6,10 +6,16 @@ $font: 'DotGothic16', sans-serif;
   font-family: $font;
 }
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.about {
+  flex-direction: row-reverse;
+}
+
+.navbar-brand {
+  padding-left: 50px;
+}
+
+.navbar-end {
+  padding-right: 50px;
 }
 
 .disclaimer {
@@ -305,10 +311,19 @@ img {
   }
 }
 
+.container-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-
-
-
+.person {
+  padding: 50px 50px 25px 50px;
+  h1 {
+    font-weight: bolder;
+    font-size: 20px;
+  }
+}
 
 
 @media screen and (max-width: 850px) {
