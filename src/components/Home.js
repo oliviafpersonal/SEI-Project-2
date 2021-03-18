@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import laugh from '../../src/assets/laugh2.gif'
 
 
 const Home = () => {
@@ -13,7 +14,7 @@ const Home = () => {
 
           <Link to="./Jokes" className="accept button is-danger" >Take me to the jokes</Link>
 
-          <img className='laughing-gif' src="https://i.pinimg.com/originals/93/cd/da/93cdda3f3ded29563c371d1dcd2c58e1.gif" alt="laughing gif" />
+          <img className='laughing-gif' src={laugh} alt="laughing gif" />
         </div>
 
 
