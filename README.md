@@ -42,3 +42,4 @@ Using an external API also taught me the importance of diving into the documenta
 
 Remaining bugs:
 
+Post deployment I noticed the images used in our About section no longer render making the styling I had implemented not functional. 
