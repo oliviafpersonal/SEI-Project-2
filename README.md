@@ -12,6 +12,7 @@ Technologies Used:
 - React.js 
 - HTML5
 - CSS
+- Bulma
 - Axios 
 - Insomnia REST Client 
 - Yarn
@@ -22,3 +23,6 @@ Overview:
 
 The app's main function was to render a random selection of jokes from the external API depending on the category chosen by the site visitor. The visitor can then choose to rate the joke out of 5 stars. Once a joke had been rated, it was stored in the rated jokes page using local storage. A button can be clicked to clear the saved jokes in order to make room for new ones. 
 
+Using the data: 
+
+After much research, we decided to use the joke API. After exploring said API in Insomnia REST Client and reading through the documentation, we discovered the API had many categories which we could use to differentiate the data with.  
