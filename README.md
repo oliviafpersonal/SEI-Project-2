@@ -26,3 +26,4 @@ The app's main function was to render a random selection of jokes from the exter
 Using the data: 
 
 After much research, we decided to use the joke API. After exploring said API in Insomnia REST Client and reading through the documentation, we discovered the API had many categories which we could use to differentiate the data with.  
+After spending time familiarising ourselves with the different possible end points, we created an axios get request, setting the chosen category to the useState hook in order for the user to be able to choose which category the joke was pulled from. We also decided at this point to enable the safe-mode in order to avoid any offensive jokes being displayed on our app. 
