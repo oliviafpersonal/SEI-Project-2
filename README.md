@@ -27,3 +27,5 @@ Using the data:
 
 After much research, we decided to use the joke API. After exploring said API in Insomnia REST Client and reading through the documentation, we discovered the API had many categories which we could use to differentiate the data with.  
 After spending time familiarising ourselves with the different possible end points, we created an axios get request, setting the chosen category to the useState hook in order for the user to be able to choose which category the joke was pulled from. We also decided at this point to enable the safe-mode in order to avoid any offensive jokes being displayed on our app. 
+
+In order to allow the users to rate the joke, we created a function in which a if-else statement was used to store the rated jokes to local storage which was then displayed on the rated jokes page by creating an empty array in which we pushed the local storage items into. 
