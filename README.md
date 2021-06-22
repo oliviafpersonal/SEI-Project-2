@@ -32,6 +32,7 @@ In order to allow the users to rate the joke, we created a function in which a i
 
 Challenges:
 
+Once we had decided we wanted to implement local storage in order to give the users of the site an interactive option, it was at first a struggle to transfer the skills of having used local storage in vanilla JavaScript in my project one, to using it in React. Overcoming this challenge was extremely satisfying. 
 
 
 Wins:
